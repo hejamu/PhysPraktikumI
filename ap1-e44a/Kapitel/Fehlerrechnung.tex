@@ -1,0 +1,42 @@
+\chapter{Fehlerrechnung}
+	Da die Spannung über das Oszilloskop gemessen wird und wir die Skalierung immer nachjustieren kann man einenen geringen Fehler von 
+\begin{align*}
+	\Delta U = 0,05 V
+\end{align*}
+    annehmen.
+    Die Frequenz kann ebenfalls ziemlich genau aus dem Oszilloskop bestimmt werden, man nehmen an 
+    \begin{align*}
+    	\Delta f = 0,5 Hz
+    \end{align*}
+	\section{Fehler für den Widerstand $R_{sp}$ über Fehlerfortpflanzung}
+    	Der Widerstand $R_{sp}$ wird über Formel
+        \begin{equation}
+        	R_{sp} = R \cdot \left( \frac{U_e}{U_a} - 1 \right)
+        \end{equation}
+        bestimmt.
+        Es gilt:
+        \begin{align*}
+        	\Delta R_{sp} &= \left|\frac{\partial R_{sp}}{\partial U_a}\right|  \cdot \Delta U_a\\
+            &=\left|\frac{R\cdot U_e}{U_a^2}\right|\cdot\Delta U_a\\
+			&=\left|\frac{1\Omega\cdot 1 V}{(0,7365V)^2}\right|\cdot0,05 V\\
+            &=0,0922\Omega
+        \end{align*}
+    	
+\section{Fehler für die Stärke des B-Felds über Fehlerfortpflanzung}
+	
+	Die Magnetfeldstärke wird über die Formel \begin{equation}
+		B =\frac{1}{2 \pi f \cdot n\cdot A}U_{ind}
+	\end{equation}
+    bestimmt.\\
+    Weil man hier in der mV-Skala gemessen hat, ist das Oszilloskop auch genauer, sodass man jetzt $\Delta U = 0,005V$ annehmen kann.
+	Es gilt: 
+    \begin{align*}
+    	\Delta B &= \left| \frac{\partial B}{\partial f} \right| \Delta f + \left| \frac{\partial B}{\partial U_{ind}} \right| \Delta U_{ind} \\
+        &=\left|\frac{U_{ind}}{2\pi f^2 n A} \right| \Delta f + \left| \frac{1}{2\pi f n A} \right| \Delta U_{ind}\\
+       &=\left|\frac{0,0832V}{2\pi (100Hz)^2 \cdot 1000 \cdot 0,00035m^2} \right| 0,5 Hz + \left| \frac{1}{2\pi 100Hz \cdot 1000 \cdot 0,00035 m^2} \right| 0,005V\\
+       & = 0,04 \cdot 10^{-3} Wb
+       \end{align*}
+
+
+
+\pagebreak

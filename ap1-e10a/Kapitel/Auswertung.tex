@@ -1,0 +1,139 @@
+\chapter{Auswertung}
+    	Für die Serienschaltung verwenden wir die Formel (3.8) und die Formel (3.9)  für Real- und Imaginärteil:
+        Beispielhaft für den ersten Wert:
+        \begin{align}
+        	Re(Z_x) = R_n &= 1200 \Omega  \\
+            Im(Z_x) &= -\frac{1}{2\pi f C} = -\frac{1}{2\pi 200 Hz \cdot 45,65 \cdot 10^{-9} F} = -17787,84 \Omega
+        \end{align}
+    
+    Mit diesen Werten bestimmen wir den Betrag mit Formel (3.13)
+    
+	\begin{align}
+		\left| Z_x \right| = \sqrt{Re(Z_x)^2 + Im(Z_x)^2} =  \sqrt{(1200\Omega)^2 + (-17787,84\Omega)^2} = 17828,27 \Omega
+	\end{align}
+    
+   und über Formel (3.14) die Phase
+   \begin{align}
+   		\Phi = \arctan\left(\frac{Im(Z_x)}{Re(Z_x)}\right) = \arctan\left(\frac{-17787,84}{1200}\right) = -1,50 rad
+   \end{align}
+    
+    Für die zweite Schaltung benötigen wir für Real und Imaginärteil die Formeln (2.11) und (2.12).
+    \begin{align}
+        	Re(Z_x) &= \frac{R_2R_3}{R_n} = \frac{(4700\Omega)^2}{20,95} = 1054,42 \Omega \\
+            Im(Z_x) &= R_2R_3 2\pi f C =  2(4700\Omega)^2 \pi 1520 Hz 0,44 \cdot 10^{-9} F = 92,83 \Omega
+        \end{align}
+    
+    Betrag und Phase werden hier auf die selbe Weise errechnet
+	\begin{align}
+		\left| Z_x \right| = \sqrt{Re(Z_x)^2 + Im(Z_x)^2} = \sqrt{(1054,42\Omega)^2 + (92,83\Omega)^2} = 1058,49 \Omega
+	\end{align}
+  
+   \begin{align}
+   		\Phi = \arctan\left(\frac{Im(Z_x)}{Re(Z_x)}\right) = \arctan\left(\frac{92,83 \Omega }{1054,42 \Omega}\right) =  0,09 rad
+   \end{align}
+   
+Analog für die anderen Werte.
+    
+In Tabelle (4.1) sind alle Ergebnisse gesammelt
+    \begin{center}
+    \begin{tabular}{c|c|c|c|c|c|c}
+$f [kHz]$    & $C [nF]$       & $R [k\Omega]$     & $Re(Z_x) [\Omega]$ & $Im(Z_x) [\Omega]$  & $|Z_x|$   & $\Phi [rad]$ \\ \hline \hline
+0,20 & 45,65   & 1,20  & 1200,00  & -17787,84 & 17828,27 & -1,50 \\
+0,40 & 48,88   & 0,99  & 990,00   & -8079,49  & 8139,92  & -1,45 \\
+0,80 & 63,00   & 1,03  & 1030,00  & -3161,79  & 3325,33  & -1,26 \\
+1,00 & 84,10   & 1,04  & 1040,00  & -1892,45  & 2159,39  & -1,07 \\
+1,20 & 133,00  & 1,05  & 1050,00  & -997,21   & 1448,08  & -0,76 \\
+1,30 & 200,00  & 1,05  & 1050,00  & -612,13   & 1215,40  & -0,53 \\
+1,36 & 275,10  & 1,05  & 1050,00  & -426,65   & 1133,37  & -0,39 \\
+1,39 & 380,30  & 1,05  & 1050,00  & -301,08   & 1092,31  & -0,28 \\
+1,45 & 1174,30 & 1,05  & 1050,00  & -93,21    & 1054,13  & -0,09 \\
+1,48 & 1222,00 & 1,05  & 1050,00  & -88,06    & 1053,69  & -0,08 \\ \hline 
+1,52 & 0,44    & 20,95 & 1054,42  & 92,83     & 1058,49  & 0,09  \\
+1,55 & 0,80    & 20,95 & 1054,42  & 172,11    & 1068,37  & 0,16  \\
+1,61 & 1,50    & 20,95 & 1054,42  & 334,15    & 1106,10  & 0,31  \\
+1,75 & 3,10    & 20,95 & 1054,42  & 752,54    & 1295,42  & 0,62  \\
+2,01 & 5,16    & 20,95 & 1054,42  & 1438,10   & 1783,23  & 0,94  \\
+2,50 & 7,46    & 20,95 & 1054,42  & 2591,64   & 2797,93  & 1,18  \\
+3,03 & 8,80    & 20,95 & 1054,42  & 3698,40   & 3845,77  & 1,29  \\
+3,99 & 13,60   & 15,00 & 1472,67  & 7531,60   & 7674,23  & 1,38  \\
+6,07 & 14,60   & 2,64  & 8367,42  & 12300,34  & 14876,56 & 0,97  \\
+8,06 & 25,00   & 0,67  & 32970,15 & 27967,31  & 43234,26 & 0,70 
+\end{tabular}
+    \captionof{table}[]{Messwerte mit berechneten Werten}
+    \end{center}
+    Die ersten drei Messwerte (in der Tabelle ganz unten) haben nicht ins Gesamtbild gepasst. Deshalb wurden diese Messungen wiederholt. Diese haben dann viel besser gepasst, so dass sie statt den zuerst gemessenen Werten verwendet wurden. In Tabelle 4.2 sind die nicht verwendeten Messwerte noch einmmal aufgeführt.
+\begin{center}
+	\begin{tabular}{c|c|c}
+    $f [kHz]$ & $C [nF]$ & $R [k\Omega]$  \\ \hline \hline
+	8,06 & 25   & 0,67 \\
+	6,07 & 14,6 & 2,64 \\
+	3,99 & 13,6 & 15
+	\end{tabular}
+    \captionof{table}[]{Messwerte der Wiederholung}
+\end{center}
+    \section{Betrag}
+    	\begin{gnuplot}[terminal=pdf,terminaloptions={font ",10" linewidth 2},scale=1.2]
+            
+           set logscale x
+            set key right
+            
+            set xlabel "Frequenz f [Hz]"
+            set ylabel "Betrag Z"
+            plot 'Daten/data.csv' using ($1*1000):($6) title 'Messwerte'
+        \end{gnuplot}
+        \captionof{figure}[Betrag]{Semilogaritmische Darstellung des Betrags}
+        \ \\
+        Aus der Theorie kann man ableiten, dass der Betrag des komplexen Widerstands bei der Resonanzfrequenz minimal wird. In Abbildung 4.1 ist der Betrag des komplexen Widerstand über die Frequenz aufgetragen. Dabei ist die x-Achse logarithmisch skaliert.
+        \ \\
+        \\
+        In der Abbildung ist der Tiefpunkt sehr gut zu erkennen. Das Minimum des Diagramms wurde von Hand auf einen Wert von 
+        \begin{align*}
+        f_1=1480 Hz
+        \end{align*} 
+        bestimmt. Dieser Wert liegt nahe an dem anfangs grob bestimmten Wert von $1,5 Hz$.
+       \section{Phase}
+   	\begin{gnuplot}[terminal=pdf,terminaloptions={font ",10" linewidth 2},scale=1.2]
+    	set fit errorvariables
+			set logscale x
+            set yrange [-1.6:1.6]
+            set key left
+            f(x) = a*atan(b*x+c)+d
+            set xlabel "Frequenz f [Hz]"
+            set ylabel "Phasenverschiebung [rad]"
+            fit f(x) 'Daten/data.csv' using ($1*1000):($7) via a,b,d,c
+       
+            plot 'Daten/data.csv' using ($1*1000):($7) title 'Messwerte', f(x)
+        \end{gnuplot}
+        \captionof{figure}[Betrag]{Semilogaritmische Darstellung der Phasenverschiebung}
+        \ \\
+        Die Phasenverschiebung zwischen Spannung und Strom verschwindet gerade dann, wenn sich die Blindwiderstände von Spule und Kondensator gerade auslöschen. Dies ist bei der Resonanzfrequenz der Fall. Mithilfe von Abbildung 4.2 kann die Resonanz durch Interpolation bestimmt werden. Wie in Abbildung 4.1 wurde die x-Achse logarithmisch skaliert.\\
+        An die Werte für die Phasenverschiebung wurde eine Funktion der Form 
+        \begin{equation}
+        \Phi(f)=a \arctan(b\cdot f+c) + d 
+        \end{equation}
+        mithilfe von gnuplot angefittet. Es ergaben sich folgende Fitwerte: \\
+        \begin{center}
+        \begin{tabular}{c|c}
+            a & 1,06185 \\
+            b & 0,00275 \\
+            c & -3,97572 \\
+            d & -0,13346 
+        \end{tabular}
+        \end{center}
+        An der Resonanzfrequenz verschwindet die Phasenverschiebung und es gilt 
+        \begin{align}
+        	0 &= a \arctan(b \cdot f+c) + d \\
+            -\frac{d}{a} &=	\arctan(b \cdot f+c)\\
+            \tan\left(-\frac{d}{a}\right) &= b\cdot f+c\\
+            f &= \frac{\tan\left(-\frac{d}{a}\right) - c}{b}
+        \end{align}
+        Damit lässt sich die Resonanzfrequenz gestimmen.
+        \begin{align}
+        	f_2 &= \frac{\tan\left(-\frac{d}{a}\right) - c}{b} \\            &= \frac{\tan\left(\frac{0,13346}{1,06185}\right) + 3,97572}{0,00275} \approx 1446,5 Hz
+        \end{align}
+        
+        Es wird der Mittelwert der beiden Ergebnisse für die Frequenz gebildet. 
+        \begin{align}
+        	\bar{f} = \frac{1446,5 Hz + 1480 Hz}{2} =  1463,25 Hz
+        \end{align}
+	\pagebreak

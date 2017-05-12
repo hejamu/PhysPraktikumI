@@ -1,0 +1,108 @@
+\documentclass[12pt,a4paper,]{scrreprt}
+\usepackage[ngerman]{babel}
+\usepackage[onehalfspacing]{setspace}
+\usepackage[utf8]{inputenc}
+
+\usepackage{graphicx,array,gnuplottex,siunitx,multicol,capt-of,amsmath,ulem,amsthm}
+\let\phi\varphi
+\setkomafont{chapter}{\fontsize{20bp}{22.2bp}\selectfont\bfseries}
+
+\setkomafont{chapter}{\fontsize{14bp}{18.8bp}\selectfont\bfseries}
+\setkomafont{section}{\fontsize{12bp}{14.4bp}\selectfont\bfseries}
+
+\renewcommand{\chapterheadstartvskip}{\vspace*{-1\topskip}}
+\renewcommand{\chapterheadendvskip}{\vspace*{0.8\topskip}}
+%---------------------------------------------------------------------------------------------------------------------------------------------------------------
+% Ende der Einstellungen
+%---------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+%---------------------------------------------------------------------------------------------------------------------------------------------------------------
+%Ab hier gibt es Inhalt
+%---------------------------------------------------------------------------------------------------------------------------------------------------------------
+\begin{document}
+
+\title{Kugelfallviskosimeter}
+\author{Henrik Jäger \\ 3114168 \and Lena Majer \\ 3115808}
+\subtitle{S20a \\  Assistent: Patrik Zielinski}
+\subject{Physikalisches Praktikum I}
+\publishers{Universität Stuttgart}
+\date{12. Januar 2017}
+%\thanks{Assistent: Sascha Kolatschek}
+
+\maketitle% Titelei
+
+\tableofcontents   %Inhaltsverzeichnis
+\pagebreak
+\input{Kapitel/Einleitung.tex}
+
+\chapter{Messprinzip mit Skizze und Versuchsablauf}
+In diesem Versuch befindet sich Öl in einem Zylinder. Der Zylinder ist mit einer Kühler- flüssigkeit umgeben. Die Temperatur des Öles wird eingestellt. Nachdem die Temperatur 5 min konstant ist, wird eine Kugel durch das Öl fallen gelassen. Die Zeit, welche die Kugel für eine Strecke l benötigt wird gestoppt. Dies wird vier Mal wiederholt. Anschließend wird das Selbe bei vier weiteren Temperaturen wiederholt. Es wird von einer laminaren Strömung ausgegangen.
+\begin{center}
+	\includegraphics[scale=0.27]{aufbau.jpeg}
+	\captionof{figure}[]{Versuchsaufbau}
+\end{center}
+
+	
+\pagebreak
+
+	\chapter{Formeln}
+Nach Höppler ist die Fallröhre kaum größer als die Kugel. Hierfür gilt:\\
+\begin{equation}
+\eta= K\cdot(\rho_k - \rho_{Fl})\cdot t 
+\end{equation}
+K entspricht einer chiastischer Konstante für die Kugel.
+Die Arrhenius-Andrade-Beziehung beziehung ist gegeben durch: \\
+\begin{equation}
+\eta =c_1 \exp (c_2 \cdot T^{-1})
+\end{equation}
+$c_1$ und $c_2$ stellen Materialkonstanten dar.
+	
+
+\pagebreak
+	
+	\input{Kapitel/Auswertung.tex}
+    \input{Kapitel/Fehlerrechnung.tex}
+    
+	\chapter{Zusammenfassung}
+In diesem Versuch konnte die Arrhenius-Andrade-Beziehung der expotentiellen Temperaturabhänigkeit der Viskosität bestätigt werden. \\
+\\
+Als Wert der stoffabhängigen Konstanten erhielt man einen Wert von
+\begin{center}
+\begin{tabular}{c|c}
+Konstante & Wert \\ \hline
+$c_1$ & $(3,5 \cdot 10^{-9} \pm 0,33 \cdot 10^{-9}) Pa \cdot s $ \\
+$c_2$ &  $(5249,64 \pm 131,17) K $\\
+\end{tabular}
+\end{center}
+
+Die Viskositäten in Abhängigkeit der Temperatur:
+\begin{center}
+   \begin{tabular}{c|c|c}
+  		Temperatur $T [\si{\kelvin}]$ & Fallzeit $t [\si{\second}]$ & Viskosität $\eta [\si{\pascal\second}]$ \\ \hline \hline
+        298,25 & 38,784	& 0,1538 \\
+		308,25 & 20,994	& 0,0832 \\
+		318,25 & 13,138	& 0,0521 \\
+		328,25 & 7,806	& 0,0310 \\
+		333,25 & 6,336	& 0,0251 \\
+   \end{tabular}
+   \captionof{table}[]{Werte der dynamischen Viskosität}
+   \end{center}
+   Dabei ist der Fehler jeweils $\Delta \eta = 0,002 Pas$
+   
+
+\pagebreak
+	\chapter{Anhang}
+    \includegraphics[scale=0.6]{protokoll.pdf}
+    \captionof{figure}[]{Messprotokoll}
+	
+
+
+
+
+
+
+
+
+
+
+\end{document}

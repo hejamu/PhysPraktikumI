@@ -1,0 +1,47 @@
+\chapter{Fehlerrechnung}
+	\section{Fehler für $T$}
+    \begin{align*}
+    	\Delta T &= \frac{0,5\si{\second}}{n} =\frac{0,5\si{\second}}{10}
+        = 0,05\si{\second}
+    \end{align*}
+    Für die Messung der Periodendauer der Schwebung $T_s$ gilt:
+    \begin{align*}
+    	\Delta T &= \frac{0,5\si{\second}}{n} =\frac{0,5\si{\second}}{5}
+        = 0,1\si{\second}
+    \end{align*}
+    
+    \section{Fehler für $K_1$ und $K_2$}
+    \begin{equation*}
+    K_1 = \frac{T^2_{gl}-T^2_{geg}}{T^2_{gl}+T^2_{geg}} ~~~~~~~~~ K_2 = 4 \cdot \frac{T_S T_{II}}{4T^2_{S}+T^2_{II}}
+    \end{equation*}
+    Beispielhaft für den ersten Wert:
+    \begin{align*}
+    	\Delta K_1 &= \left|\frac{\partial K_1}{\partial T_{gl}}\right| \cdot \Delta T + \left| \frac{\partial K_1}{\partial T_{gg}}\right| \cdot \Delta T \\
+        &= \left|\frac{4T_{gl}T_{gg}^2}{(T_{gl}^2 + T_{gg}^2)^2}\right| \cdot \Delta T + \left| - \frac{4T_{gl}T_{gg}^2}{(T_{gl}^2 + T_{gg}^2)^2}\right| \cdot \Delta T \\
+        &= \left|\frac{4 \cdot 1,7233\si{\second} \cdot (1,705\si{\second})^2}{((1,7233\si{\second})^2 + (1,705\si{\second})^2)^2}\right| \cdot 0,05\si{\second}  \\ & ~~~~+ \left| - \frac{4 \cdot 1,7233\si{\second} \cdot (1,705\si{\second})^2}{((1,7233\si{\second})^2 + (1,705\si{\second})^2)^2}\right| \cdot 0,05\si{\second} \\
+        &= 0,0580
+    \end{align*}
+    
+      \begin{align*}
+    	\Delta K_2 &= \left|\frac{\partial K_2}{\partial T_{s}}\right| \cdot \Delta T + \left| \frac{\partial K_2}{\partial T_{II}}\right| \cdot \Delta T \\ 
+        & = \left| \frac{4T_{II} (T_{II}^2 - 4 T_s^2)}{(4T_s^2 + T_{II}^2)^2} \right| \Delta T + \left| \frac{4T_{s} (4T_{s}^2 - T_{II}^2)}{(4T_s^2 + T_{II}^2)^2} \right| \Delta T \\ 
+        &= \left| \frac{4 \cdot 1,71\si{\second} ((1,71\si{\second})^2 - 4 (128,7433\si{\second})^2)}{(4 (128,7433\si{\second})^2 + (1,71)^2)^2} \right| 0,1\si{\second}  \\ & ~~~~+ \left| \frac{4 \cdot 128,7433\si{\second} \cdot (4(128,7433\si{\second})^2 - (1,71)^2)}{(4(128,7433\si{\second})^2 + (1,71\si{\second})^2)^2} \right| 0,05\si{\second} \\
+        &= 0,0004
+     \end{align*}
+    Analog für die restlichen Werte:
+    \begin{center}
+    
+    \begin{tabular}{c||c|c}
+    $l ~ [cm]$ & $\Delta K_1~[1] $ & $\Delta K_2~[1]$ \\ \hline \hline
+    20&0,0580	&0,0004 \\
+	35&0,0584	&0,0010\\
+	50&0,0580	&0,0018\\
+	65&0,0574	&0,0025\\
+
+    \end{tabular}
+    \captionof{table}[]{Werte}
+   \end{center}
+    
+\section{Fehlerquellen}
+    Die verwendeten Messgeräte haben nur eine gewisse Genauigkeit. Zudem ist es auch nicht möglich ganz exakt eine gleichphasige oder eine genau gegenphasige Schwingung zu erzeugen. Auch hierbei kommt es zu einem Fehler.
+\pagebreak

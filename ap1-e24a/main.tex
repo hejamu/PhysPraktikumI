@@ -1,0 +1,41 @@
+\documentclass[12pt,a4paper,]{scrreprt}
+\usepackage[ngerman]{babel}
+\usepackage[onehalfspacing]{setspace}
+\usepackage[utf8]{inputenc}
+
+\usepackage{graphicx,array,gnuplottex,siunitx,multicol,capt-of,amsmath,ulem,amsthm}
+
+\setkomafont{chapter}{\fontsize{20bp}{22.2bp}\selectfont\bfseries}
+
+\setkomafont{chapter}{\fontsize{14bp}{18.8bp}\selectfont\bfseries}
+\setkomafont{section}{\fontsize{12bp}{14.4bp}\selectfont\bfseries}
+
+\renewcommand{\chapterheadstartvskip}{\vspace*{-1\topskip}}
+\renewcommand{\chapterheadendvskip}{\vspace*{0.8\topskip}}
+%------------------------------------------------------------%
+% 					Ende der Einstellungen					 %
+%------------------------------------------------------------%
+\begin{document}
+	\title{Halbleiterdiode \\ (Korrektur)}
+	\author{Henrik Jäger \\ 3114168 \and Lena Majer \\ 3115808}
+	\subtitle{E24a \\  Assistent: Helmut Farsch}
+	\subject{Physikalisches Praktikum I}
+	\publishers{Universität Stuttgart}
+	\date{03. November 2016}
+    %\thanks{Assistent: Sascha Kolatschek}
+	
+	\maketitle% Titelei
+
+	\tableofcontents   %Inhaltsverzeichnis
+	\pagebreak	
+	
+    \input{Kapitel/Einleitung.tex}
+    \input{Kapitel/Messprinzip_mit_Skizze_und_Versuchsablauf.tex}
+    \input{Kapitel/Formeln.tex}
+    %\input{Kapitel/Messwerte.tex}
+    \input{Kapitel/Auswertung.tex}
+    \input{Kapitel/Fehlerrechnung.tex}
+    \input{Kapitel/Zusammenfassung.tex}
+    \input{Kapitel/Anhang.tex}
+    
+\end{document}

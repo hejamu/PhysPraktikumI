@@ -1,0 +1,60 @@
+\chapter{Formeln}
+Wechselströme können mithilfe imaginärer Exponentialfunktionen beschrieben werden:\\
+\begin{equation}
+I=I_0 \cdot \exp(i \cdot \omega \cdot t)
+\end{equation}
+$I_0$ entspricht der Amplitude, $\omega$ der Kreisfrequenz.\\
+\\
+Für eine Spule gilt:\\
+\begin{equation}
+U=L \cdot I
+\end{equation}
+\begin{equation}
+Z_L= \frac{U}{I} = i \cdot \omega \cdot L
+\end{equation}
+\\
+Für einen Kondensator gilt:\\
+\begin{equation}
+I = C\cdot\dot{U}
+\end{equation}
+ \begin{equation}
+ Z_C = \frac{U}{I} = -\frac{i}{\omega \cdot C}
+ \end{equation}
+C entspricht der Kapazität.\\
+\\
+
+Nach einem Brückenabgleich gilt in der Wheatstonschen Brückenschaltung:
+\begin{equation}
+	\frac{Z_x}{Z_3} = \frac{Z_2}{Z_4}
+\end{equation}
+
+Damit gilt in der Reihenschaltung
+\begin{equation}
+	Z_x = Z_2 = R_n + \frac{1}{i\omega C} = 
+R_n - \frac{1}{\omega \cdot C} i 
+\end{equation}
+Für den Real- und Imaginärteil gilt dann 
+\begin{align}
+	Re(Z_x) &= R_n \\
+	Im(Z_x) &= - \frac{1}{2\pi f C}
+\end{align}
+
+Für die Parallelschaltung gilt dann
+\begin{align}
+ Z_x = Z_2Z_3 \frac{1}{Z_4} &= {\frac{R_2R_3}{R_n} +  R_2R_3 \omega C i} 
+\end{align}
+Für den Real- und Imaginärteil gilt dann 
+\begin{align}
+	Re(Z_x) &=  \frac{R_2R_3}{R_n}\\
+	Im(Z_x) &= R_2R_3 \omega C 
+\end{align}
+
+Für die Auswertung wird zusätzlich der Betrag
+\begin{equation}
+	|Z_x| = \sqrt{Re(Z_x)^2 + Im(Z_x)^2}
+\end{equation}
+und die Phase 
+\begin{equation}
+	\phi =  \arctan\left(\frac{Im(Z)}{Re(Z)}\right)
+\end{equation}
+	\pagebreak

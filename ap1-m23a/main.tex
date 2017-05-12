@@ -1,0 +1,147 @@
+\documentclass[12pt,a4paper,]{scrreprt}
+\usepackage[ngerman]{babel}
+\usepackage[onehalfspacing]{setspace}
+\usepackage[utf8]{inputenc}
+
+\usepackage{graphicx,array,gnuplottex,siunitx,multicol,capt-of,amsmath,ulem,amsthm}
+\let\phi\varphi
+\setkomafont{chapter}{\fontsize{20bp}{22.2bp}\selectfont\bfseries}
+\setkomafont{section}{\fontsize{12bp}{14.4bp}\selectfont\bfseries}
+
+\renewcommand{\chapterheadstartvskip}{\vspace*{-1\topskip}}
+\renewcommand{\chapterheadendvskip}{\vspace*{0.8\topskip}}
+%---------------------------------------------------------------------------------------------------------------------------------------------------------------
+% Ende der Einstellungen
+%---------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+%---------------------------------------------------------------------------------------------------------------------------------------------------------------
+%Ab hier gibt es Inhalt
+%---------------------------------------------------------------------------------------------------------------------------------------------------------------
+\begin{document}
+
+\title{Gekoppelte Pendel}
+\author{Henrik Jäger \\ 3114168 \and Lena Majer \\ 3115808}
+\subtitle{M23a \\  Assistentin: Ramona Tschüter}
+\subject{Physikalisches Praktikum I}
+\publishers{Universität Stuttgart}
+\date{26. Januar 2017}
+%\thanks{Assistent: Sascha Kolatschek}
+
+\maketitle% Titelei
+
+\tableofcontents   %Inhaltsverzeichnis
+\pagebreak
+\chapter{Einleitung}
+\section{Ziel}
+Das Ziel dieses Versuches ist die Bestimmung des Kopplungsgrades zweier Pendel. Hierfür werden die Periodendauern verschiedener Schwinungsarten der gekoppelten Pendel bestimmt.
+\section{Grundlagen}
+Unter einem mathematischen Pendel versteht man ein Pendel, das aus einem Massenlosen Stab und einer Punktmasse besteht.
+Unter einem physikalischen Pendel versteht man einen langen starren Stab, der am Ende aufgehängt ist.
+Im Folgenden Versuch werden zwei mathematisches Pendel, ohne Raumausdehnung,  betrachtet. Diese Pendel sind miteinander gekoppelt. Bei diesem Pendel muss somit die potentielle Energie der Feder und die Gravitation  berücksichtigt werden.
+%Die Lagrangefunktion ist gegeben durch:\\
+%\begin{equation}
+%L= 1/2 I \dot{\Psi_1}+ 1/2 I \dot{\Psi_2} + m*g*L*cos(\Psi_1) + m*g*L*cos(\Psi_2) - 1/2D_F*l^2(sin(\Psi_1) – sin(\Psi_2))^2\\
+%\end{equation}
+
+%L = kinetische Energie – Gravitationspotential – Federpotential\\
+Über Euler-Lagrange können die Bewegungsgleichungen aufgestellt werden. Diese sind gegeben durch:
+\begin{equation}
+I\frac{d^2\Psi _1}{dt^2}= -m\cdot g\cdot L\cdot\Psi_1 – D\cdot l^2(\Psi_1 - \Psi_2)
+\end{equation}
+\begin{equation}
+I\frac{d^2\Psi _2}{dt^2}= - m\cdot g\cdot L\cdot\Psi_1 – D\cdot l^2(\Psi_2 - \Psi_2)
+\end{equation}
+I steht für das Trägheitsmoment, m entspricht der Masse des Pendelkörpers, D ist die Federkonstante, $\Psi$ steht für die verschiedenen Auslenkungswinkeln, L entspricht der Länge des Pendels und l beschreibt den Abstand zwischen der Feder und der Aufhängung. Nach Lösen der Bewegungsgleichung erhält man zwei Fundamentallösungen, die für zwei Fundamentalschwingungen stehen. \
+ Diese Fundamentalschwingungen beschreiben  die Schwingung der beiden Pendelkörper miteinander – ohne Phasenverschiebung. Dies nennt man auch symmetrische Schwingung. \ 
+ Die zweite Fundamentalschwingung hat eine Phasenverschiebung der Größe  $\pi$.  Alle weiteren Lösungen sind durch Linearkombinationen der beiden Fundamentalschwingungen gefunden. Dies wird auch antisymmetrische Schwingung genannt. Unter dem Schwebungsfall versteht man eine Superposition aus den beiden Fundamentalschwingungen.% Als Lösung der Differentialgleichung  erhält man hierfür: \\
+%\begin{equation}
+%\Psi_1 (t) = \Psi_a * cos (w_(II)*t) 
+%\end{equation}
+%\begin{equation}
+%\Psi_2 (t) = \Psi_a * cos (w_(II)*t) 
+%\end{equation}
+
+
+
+\chapter{Messprinzip mit Skizze und Versuchsablauf}
+In diesem Versuch sind zwei physikalische Pendel gegeben. Zunächst wird die Schwingdauer der Pendel ohne Kopplung bestimmt. Anschließend wird eine Kopplung zwischen den zwei Pendeln in einer Höhe von $20\si{\centi\metre}$ montiert. Daraufhin wird die gleichphasige Schwingung und gegenläufige Schwingung über zehn Perioden bestimmt.
+Zuletzte wird die Schwebungsdauer und die hierbei verbundene Periodendauer der Pendel bestimmt.
+Dies wird für drei weitere Kopplungsgrade ($35\si{\centi\metre}$, $50\si{\centi\metre}$,$65\si{\centi\metre}$) wiederholt.
+\begin{center}
+
+\includegraphics[scale=0.25]{2.jpg}
+\captionof{figure}[]{Versuchsaufbau}
+\end{center}
+
+
+	\chapter{Formeln}
+    Den Kopplungsgrad K der gekoppelten Pendeln bestimmt man über die verschiedenen Schwingdauern T. Hierfür gilt:
+    \begin{equation}
+    K_1=\frac{T^2_{gl}-T^2_{geg}}{T^2_{gl}+T^2_{geg}}
+    \end{equation}
+    \begin{equation}
+    K_2=4 \cdot \frac{T_S T_{II}}{4T^2_{S}+T^2_{II}}
+    \end{equation}
+	\pagebreak
+
+
+
+	\chapter{Messwerte}
+  \begin{center}
+  
+    \begin{tabular}{c||c|c|c|c}
+    $l~[cm] $& $10T_{gl}~[s]$ & $10T_{gg}~[s]$ &	$5T_{s}~[s]$ & $10T_{II}~[s]$ \\ \hline \hline
+		&17,2	&17,1	&514,6 (4 Perioden)	&17,1\\
+	20	&17,2	&17,05	&647	&17,1\\
+		&17,3	&17		&640,9	&17,1\\ \hline
+		&17,05	&16,6	&223,7	&17,1\\
+	35	&17,1	&16,5	&221,7	&16,9\\
+		&17,2	&16,6	&222	&16,9\\ \hline
+		&17,2	&16,1	&118,1	&16,6\\
+	50	&17,12	&16		&119	&16,5\\
+		&17,2	&16		&117,2	&16,6\\ \hline
+		&17,2	&15,5	&75,4	&17,2\\
+	65	&17,3	&15,5	&76,2	&17,1\\
+		&17,2	&15,4	&76,3	&17,1\\
+    \end{tabular}
+    \captionof{table}[]{Messwerte}
+  \end{center}
+     $10T_0=17,2s$
+	\pagebreak
+
+	\input{Kapitel/Auswertung.tex}
+
+	\input{Kapitel/Fehlerrechnung.tex}
+
+	\chapter{Zusammenfassung}
+    In diesem Versuch wurden die Schwingdauern von gekoppelten Pendel gemessen. Aus diesen Schwingdauern wurden die Kopplungen bestimmt.\\
+    \\
+    Für die Kopplungen erhielt man die Werte:
+    \begin{center}
+    \begin{tabular}{c||c|c}
+     $l~[cm] $& $\Delta K_1~[1]$ & $\Delta K_2~[1]$ \\ \hline \hline
+	20&$0,0107\pm 0,0580$&$0,0133\pm0,0004$\\
+	35&$0,0326\pm 0,0584$&$0,0381\pm0,0010$\\
+	50&$0,0686\pm 0,0580$&$0,0701\pm0,0018$\\
+	65&$0,1077\pm 0,0574$&$0,1124\pm0,0025$\\
+   \end{tabular}
+   \captionof{table}[]{Endergebnis}
+    \end{center}
+   
+Fehlerquellen waren Ungenauigkeiten der Messaperaturen. Zudem ist es nur sehr schwer möglich eine reine gleichphasige oder gegenphasige Schwingung zu erzeugen.
+
+	\chapter{Anhang}
+    \includegraphics[scale=0.75]{1.pdf}
+	\pagebreak
+
+
+
+
+
+
+
+
+
+
+
+\end{document}

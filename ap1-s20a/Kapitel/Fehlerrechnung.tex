@@ -1,0 +1,43 @@
+\chapter{Fehlerrechnung}
+    Für die Zeitmessung wird eine Messungenauigkeit von $\Delta t = 0,5s$ angenommen. Weiterhin kann für die Temperatur eine Ungenauigkeit von $\Delta T = 0,5 K$ angenommen werden.
+    
+    Für die Viskosität $\eta$ ergibt sich somit:
+    \begin{align*}
+    	\Delta\eta &= \left| \frac{\partial \eta}{\partial t} \right| \cdot \Delta t \\
+        		& = \left| K (\rho_k - \rho_{Fl}) \right| \cdot \Delta t \\
+                & = 0,0005445 \si{\pascal\centi\metre^3\per\gram} (8,141 \si{\gram\per\centi\metre^3} - 0,86 \si{\gram\per\centi\metre^3}) \cdot 0,5 \si{\second} = 0,0020 \si{\pascal\second}
+    \end{align*}
+    Für $T^{-1}$:
+    \begin{align*}
+    \Delta T^{-1} &= \left| T^{-1} \right| \Delta T \\
+    & = \left| -T^{-2} \right| \Delta T \\
+    &= (298,25 \si{\kelvin})^{-2} \cdot 0,5 \si{\kelvin} = 0,00000562 \si{\kelvin}
+    \end{align*}
+    
+    
+    \begin{center}
+    \begin{tabular}{c|c}
+    Temperatur T $[\si{\kelvin}]$& Fehler $\Delta T  [\si{\kelvin}]$\\ \hline \hline
+    298,25 &  0,00000562 \\ 
+	308,25 &  0,00000526 \\
+	318,25 &  0,00000494 \\
+	328,25 &  0,00000464 \\
+	333,25 &  0,00000450 \\
+    \end{tabular}
+    \captionof{table}[]{Fehler für die Temperatur}
+ 	\end{center}   
+   Der Fehler für die Konstante $c_1$ wurde über Fehlergeraden auf $ c_{1min} = c_{1max} = 1,514\cdot10^{-15} Pas$ ermittelt. \\
+   Der Fehler für die Konstante $c_2$ wurde über Fehlergeraden auf $ c_{2min} = c_{2max} = 131,17 K$ ermittelt.\\
+   
+   Für den Fehler von $c_1$ setzen wir die Formel $\Delta c_1 = \left| <c_1> - c_1(min|max)\right|$
+   
+   Der Fehler von $c_1$ ist $\Delta c_1 = 3,466 \cdot 10^{-9} Pas - 1,514 \cdot 10^{-10} Pas = 3,312 \cdot 10^{-9} Pas$ 
+    \section{Mögliche Abweichungen}
+    Fehlerquellen sind in diesem Versuch:
+    \begin{itemize}
+    \item Messungenauigkeiten beim Zeitstoppen
+    \item Messungenauigkeiten bei der Temperaturbestimmung
+    \item Einzelne Luftbläschen, die sich im Öl befinden
+    \end{itemize}
+
+\pagebreak

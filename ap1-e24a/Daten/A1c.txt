@@ -1,0 +1,12 @@
+#Aufgabe 1 Aufgabenteil c
+#Sperrspannung	Ge	Si
+#U (V)	Mikro A Mikro A 
+-1	-0.6	-0.1
+-2	-0.7	-0.2
+-3	-0.9	-0.3
+-4	-1.2	-0.5
+-5	-1.5	-0.6
+-6	-1.7	-0.7
+-7	-2	-0.8
+-7.29	-2	?
+-7.33	?	-0.8 	

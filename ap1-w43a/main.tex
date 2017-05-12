@@ -1,0 +1,206 @@
+\documentclass[12pt,a4paper,]{scrreprt}
+
+\usepackage{filecontents}
+\usepackage[ngerman]{babel}				% Deutscher Sprachsupport
+\usepackage[onehalfspacing]{setspace} 	% Zeilenabstand 1,5
+\usepackage[utf8]{inputenc}				% Sonderzeichen 
+\usepackage{relsize,booktabs,tikz}
+
+\usepackage{biblatex}
+\addbibresource{\jobname.bib}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage[
+labelfont=sf,
+hypcap=false,
+format=hang,
+width=0.8\columnwidth
+]{caption}
+\usepackage{graphicx,array,siunitx,multicol,capt-of,amsmath,ulem,amsthm}					% Anderes
+\let\phi\varphi
+\setkomafont{chapter}{\fontsize{20bp}{22.2bp}\selectfont\bfseries}
+
+\setkomafont{chapter}{\fontsize{14bp}{18.8bp}\selectfont\bfseries}
+\setkomafont{section}{\fontsize{12bp}{14.4bp}\selectfont\bfseries}
+\usepackage{hyperref}
+
+\renewcommand{\chapterheadstartvskip}{\vspace*{-1\topskip}}
+\renewcommand{\chapterheadendvskip}{\vspace*{0.8\topskip}}
+\begin{filecontents*}{\jobname.bib}
+	@book{ art:test,
+  		author = {Wikipedia, Isentropenexponent},
+  		title  = {\url{https://de.wikipedia.org/wiki/Isentropenexponent}},
+  		publisher = {de.wikipedia.org},
+  		year = {abgerufen am 04. Dezember 2016},
+}
+\end{filecontents*}
+%---------------------------------------------------------------------------------------------------------------------------------------------------------------
+% Ende der Einstellungen
+%---------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+%---------------------------------------------------------------------------------------------------------------------------------------------------------------
+%Ab hier gibt es Inhalt
+%---------------------------------------------------------------------------------------------------------------------------------------------------------------
+\begin{document}
+
+\title{Adiabatenexponent \\ (2. Korrektur)}
+\author{Henrik Jäger \\ 3114168 \and Lena Majer \\ 3115808}
+\subtitle{W43a \\  Assistent: André Haug}
+\subject{Physikalisches Praktikum I}
+\publishers{Universität Stuttgart}
+\date{Versuchstag: 1. Dezember 2016 \\ Erstabgabe: 8. Dezember 2016 \\ Abgabe der Korrektur: 21. Dezember 2016 \\ Abgabe der Zweitkorrektur: 19. Januar 2017}
+%\thanks{Assistent: Sascha Kolatschek}
+
+\maketitle% Titelei
+
+\tableofcontents   %Inhaltsverzeichnis
+\pagebreak
+
+\captionsetup{width=0.8\linewidth}
+
+\chapter{Einleitung}
+\section{Ziel}
+In diesem Versuch soll der Adiabatenexponent von mehreren Stoffen bestimmt werden. Zu bestimmen sind die Adiabatenexponenten von den Gasen Luft (stellvertretend für N$_2$), Kohlenstoffdioxid (CO$_2$) und Argon (Ar).
+\section{Grundlagen}
+Wenn man mit Gasen zu tun hat, geht man häufig von idealen Gasen aus. Hierbei spielt das ideale Gasgesetz eine wichtige Rolle:\\
+\begin{equation}
+p\cdot V=n\cdot R\cdot T,
+\end{equation}
+$p$ entspricht dem Druck , $V$ entspricht dem Volumen, $n$ bezeichnet die Molzahl, $R$ ist die allgemeine Gaskonstante und $T$ entspricht der Temperatur.\\
+Bei idealen Gasen gibt es unterschiedliche thermodynamische Prozesse. Unter einem isochoren Prozess versteht man ein Gleichbleiben des Volumens. \\
+Unter einer adiabatischen Zustandsänderung versteht man eine Zustandsänderung bei der gilt:
+\begin{equation}
+P\cdot V^\gamma = konstant
+\end{equation}
+$\gamma$ kann durch spezifische Kapazitäten berechnet werden. Dabei steht $c_v$ für die Wärmekapazität bei konstanten Volumen und $c_p$ für die Wärmekapazität bei konstanten Druck.\\
+\begin{equation}
+	\gamma = \frac{c_p}{c_v}
+\end{equation}
+$\gamma$ kann auch experimentell bestimmt werden. Hierfür nimmt man eine Gasfeder zur Hilfe. Die hierfür nötige Bewegungsgleichung der Gasfeder lautet:\\
+\begin{equation}
+m \cdot \ddot{x} + \gamma \cdot p_0 \cdot  \frac{A^2}{V_0 } \cdot x=0 
+\end{equation}
+Diese Differentialgleichung beschreibt einen harmonischen Oszillator. Dessen Lösung, sowie die Formel für die Frequenz sind schon bekannt.
+Die Frequenz entspricht:\\
+\begin{equation}
+f = \frac{1}{2\pi \sqrt{\frac{m}{D}}}= \frac{1}{2 \pi \cdot \sqrt{m \cdot \frac{V_0}{ \gamma \cdot p_0 \cdot A^2}}}
+\end{equation}
+
+Wie die Energie sich in thermodynamischen Prozessen verhält, wird im ersten Hauptsatz der Thermodynamik beschrieben: \\
+\begin{equation}
+dU = dQ  p \cdot dV
+\end{equation}
+$U$ steht für die innere Energie. Als Thermische Energie wird $Q$ bezeichnet. Es gilt:\\
+\begin{equation}
+\Delta Q = C \cdot \Delta T 
+\end{equation}
+$C$ nennt man die Proportionalitätskonstante oder Wärmekapazität. \\
+$C$ kann auf zwei verschiedene Methoden bestimmt werden.  Zum einen kann einem Körper eine bestimmte Wärmemenge zugefügt werden und die daraus resultierende Temperaturänderung gemessen werden.\\
+Es können aber auch zwei Körper aneinander gelegt werden, um eine gemeinsame Temperatur zu erhalten. Durch diese gemessene Temperatur und die bekannte Wärmekapazität eines Körpers kann die Wärmekapazität des anderen Körpers zu bestimmen.
+\pagebreak
+
+\chapter{Messprinzip mit Skizze und Versuchsablauf}
+\begin{center}
+    		\includegraphics[scale=0.2]{Daten/aufbau.jpeg}
+    	\end{center}
+    	\captionof{figure}[Seite 1]{Versuchsaufbau bestehend aus einem Glaszylinder und Gaseinlassventil, einem beweglichen Kolben mit Permanentmagneten. Um das Glasrohr sitzt eine Spule  für das magnetische Wechselfeld.}
+\ \\
+Hierfür wird ein Glaszylinder verwendet. Dieser schließt ein Gasvolumen $V$ ein. In diesem Glaszylinder befindet sich ein Kolben mit Permanentmagnet, der möglichst reibungsfrei gleiten kann. Um den Zylinder befindet sich eine bewegliche Spule. \\
+\\
+Um den Adiabatenexponenten bestimmen zu können, wird die Resonanzfrequenz in Abhängigkeit des eingeschlossenen Luftvolumens bestimmt. \\
+\\
+Mit einem außen an den Zylinder gehaltenen Magneten wird der Kolben angehoben. Durch Anlegen eines konstanten Magnetfelds wird der Kolben in einer bestimmten Höhe gehalten. Die Gewichtskraft wird damit kompensiert.\\
+\\
+Durch Anlegen eines Wechselmagnetfelds wird der Kolben in Schwingung versetzt. Sobald der Kolben in Bewegung ist, wird versucht die Resonanzfrequenz einzustellen. Die Resonanzfrequenz ist erreicht, wenn die Amplitude des schwingenden Kolbens maximal ist.\\
+\\
+Nachdem die Resonanzfrequenz erreicht ist, wird die Höhe des Kolbens gemessen, um das eineschlossene Volumen bestimmen zu können. \\
+\\
+Das Vorgehen wird sieben Mal wiederholt.\\
+\\
+Anschließend werden dieselben Messungen auch für die Gase Argon und CO$_2$ durchgeführt. Auch hier werden jeweils acht verschiedene Volumina untersucht.\\
+\\
+Bevor die Messungen gestartet werden können, müssen jeweils Zylinder und die Zugangsschläuche mit dem entsprechendem Gas gespült werden.
+	\pagebreak
+    
+\chapter{Formeln}
+
+Zur Berechnung des Adiabatenexponenten wird die Formel aus der Versuchsanweisung$^[$\footnote{Versuchsanleitung W43, Anfängerpraktikum, Universität Stuttgart. Stand: 29.09.2016}$^]$ verwendet:
+\begin{align}
+     		\gamma = \frac{4\pi^2 m V_0 f_0^2}{A^2 p_0}
+            \label{gamma}
+      \end{align}
+      $m$ steht für die Masse,  $V_0$ für das eingeschlossenen Gasvolumen, $f_0$ entspricht der Resonanzfrequenz des schwingenden Kolbens und $p_0$ steht für den Druck.
+	\pagebreak
+
+
+
+	\chapter{Messwerte}
+    	\begin{center}
+    	\begin{tabular}{c|cccccccc}
+        	$l ~ [ \text{m}]$ & 0,45 & 0,40  & 0,35 & 0,30 & 0,25 & 0,20 & 0,15 & 0,10 \\ \hline
+			$f_0 ~[ \text{Hz}]$& 13,4 & 14,1 & 15,5 & 16,4 & 17,8 & 19,7 & 22,8 & 27,4                
+		\end{tabular}
+			\captionof{table}[luft]{Messwerte mit Luft als Kolbenfüllung.}
+            \ \\
+            \ \\
+    	\begin{tabular}{c|cccccccc}
+        	$l ~ [ \text{m}]$ &0,45 & 0,40 & 0,35 & 0,30  & 0,25 & 0,20  & 0,15 & 0,10  \\ \hline
+			$f_0 ~[ \text{Hz}]$&13,4 & 14,0  & 14,8 & 15,8 & 17,4 & 19,3 & 22,4 & 26,5
+		\end{tabular}
+			\captionof{table}[luft]{Messwerte mit CO$_2$ als Kolbenfüllung.}
+            \ \\
+            \ \\
+		\begin{tabular}{c|cccccccc}
+        	$l ~ [ \text{m}]$ &0,45&0,40& 0,35& 0,30 &0,24 & 0,19 & 0,14 & 0,095 \\ \hline
+			$f_0 ~[ \text{Hz}]$&14,7	&15,3&16,6&17,4&19,3	&20,8&28,7&29,1  
+		\end{tabular}
+			\captionof{table}[luft]{Messwerte mit Argon als Kolbenfüllung.}
+            \ \\
+            $p = 1031 \si{\hecto\pascal}$ \\
+            $m = 8,8781 \si{\gram}$ \\
+            $d = 16 \si{\milli\metre}$ \\
+            
+            \ \\
+    \end{center}
+        
+    \pagebreak
+
+	\input{Kapitel/Auswertung.tex}
+
+	\input{Kapitel/Fehlerrechnung.tex}
+		
+        
+	\chapter{Zusammenfassung}
+    
+    
+    Es wurden der Adiabatenexponenten der Gase Argon, CO$_2$ und Luft (N$_2$) folgende Werte ermittelt: 
+    \begin{center}
+    
+    \begin{tabular}{c|c}
+    	Medium & $\gamma ~ [1]$\\ \hline
+        Luft & $1,37 \pm 0,048$\\
+        CO$_2$ & $1,31 \pm 0,048$\\
+        Argon& $1,62 \pm 0,053$
+    \end{tabular}
+    \captionof{table}[]{Messergebnisse}
+    \end{center}
+    Fehler erhielt man durch Ungenauigkeiten beim Ablesen der Länge zur Bestimmung der Volumina des Gases. Die Ungenauigkeit beim Ablesen der maximalen Amplitude bei der Resonazfrequenz und die begrenzte Anzeigekapazität des Frequenzgenerators ist auch mit einem gewissen Fehler verbunden.\\
+	
+	
+	\printbibliography
+    \pagebreak
+    \chapter{Anhang}
+    \begin{center}
+    		\includegraphics[scale=0.65]{Daten/protokoll.pdf}
+    	\end{center}
+    	\captionof{figure}[Seite 1]{Messprotokoll}
+	\pagebreak
+
+
+
+
+
+
+
+
+\end{document}

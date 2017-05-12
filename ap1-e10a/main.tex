@@ -1,0 +1,150 @@
+\documentclass[12pt,a4paper,]{scrreprt}
+\usepackage[ngerman]{babel}
+\usepackage[onehalfspacing]{setspace}
+\usepackage[utf8]{inputenc}
+
+\usepackage{graphicx,array,gnuplottex,siunitx,multicol,capt-of,amsmath,ulem,amsthm}
+\let\phi\varphi
+\setkomafont{chapter}{\fontsize{20bp}{22.2bp}\selectfont\bfseries}
+
+\setkomafont{chapter}{\fontsize{14bp}{18.8bp}\selectfont\bfseries}
+\setkomafont{section}{\fontsize{12bp}{14.4bp}\selectfont\bfseries}
+
+\renewcommand{\chapterheadstartvskip}{\vspace*{-1\topskip}}
+\renewcommand{\chapterheadendvskip}{\vspace*{0.8\topskip}}
+%---------------------------------------------------------------------------------------------------------------------------------------------------------------
+% Ende der Einstellungen
+%---------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+%---------------------------------------------------------------------------------------------------------------------------------------------------------------
+%Ab hier gibt es Inhalt
+%---------------------------------------------------------------------------------------------------------------------------------------------------------------
+\begin{document}
+
+\title{Wechselstromwiderstände und Serienschwingkreis (Korrektur)}
+\author{Henrik Jäger \\ 3114168 \and Lena Majer \\ 3115808}
+\subtitle{E10a \\  Assistent: Wolfgang Voesch}
+\subject{Physikalisches Praktikum I}
+\publishers{Universität Stuttgart}
+\date{24. November 2016}
+%\thanks{Assistent: Sascha Kolatschek}
+
+\maketitle% Titelei
+
+\tableofcontents   %Inhaltsverzeichnis
+\pagebreak
+\chapter{Einleitung}
+\section{Ziel}
+In diesem Versuch geht es um die Bestimmung einem frequenzabhängigen Widerstand eines Schwingkreises. Im Laufe des Versuches wird zudem die Resonanzfrequenz bestimmt.
+\section{Grundlagen}
+Widerstände, die in Serie geschaltet werden, können um den Gesamtwiderstand zu bestimmen addiert werden. Die gesamte Spannung kann bei in Serie geschalteten  Widerständen ebenfalls so ermittelt werden, dass man die Spannungen, die an den einzelnen Widerständen anliegen, addiert. Der Strom durch die Einzelnen in Reihe geschalteten Widerstände ist gleich.\\
+\begin{equation}
+R_0= R_1 + R_2+…
+\end{equation}
+ \begin{equation}
+ U_0 = U_1+U_2+…
+ \end{equation}
+ \begin{equation}
+ I_0 = I_1 = I_2…
+ \end{equation}
+Sind Widerstände parallel geschaltet, errechnet sich eins durch den Gesamtwiderstand als Summe von eins durch die einzelnen Widerstände. Die Spannung die an einem einzelnen Wiederstand anliegt, liegt auch an allen anderen einzelnen Widerständen an. Der Gesamtstrom setzt sich aus den einzelnen Strömen durch die einzelnen Wiederstände zusammen.\\
+\begin{equation}
+\frac{1}{R_0} = \frac{1}{R_1} + \frac{1}{R_2} ...
+\end{equation}
+\begin{equation}
+ U_0 = U_1 = U_2 …
+\end{equation}
+\begin{equation}
+ I_0 = I_1 + I_2 + …
+\end{equation}
+Besitzt eine Schaltung nicht nur Widerstände und stattdessen auch Spulen und Kondensatoren muss auch beachtet werden, dass Spulen und Kondensatoren unterschiedliche Verhaltensweisen bei Wechselstrom und Gleichstrom haben. Für eine Spule gilt:\\
+\begin{equation}
+U=L\cdot \frac{d}{dt} I
+\end{equation}
+\begin{equation}
+Z_L= \frac{U}{I} = i \cdot \omega \cdot L
+\end{equation}
+Hierbei entspricht L der Induktivität der Spule. Bei Spulen ist die Spannung um $\pi/2$ vor den Strom verschoben.\\
+Für einen Kondensator gilt:\\
+\begin{equation}
+I = C\cdot\dot{U}
+\end{equation}
+ \begin{equation}
+ Z_C = \frac{U}{I} = -\frac{i}{\omega \cdot C}
+ \end{equation}
+C entspricht der Kapazität. Bei Kondensatoren ist die Spannung um $\pi/2$ hinter den Strom verschoben.\\
+Wechselströme können mithilfe imaginärer Exponentialfunktionen beschrieben werden:\\
+\begin{equation}
+I=I_0 \cdot \exp(i\cdot \omega \cdot t)
+\end{equation}
+$I_0$ entspricht der Amplitude, $\omega$ der Kreisfrequenz.\\
+\pagebreak
+
+\chapter{Messprinzip mit Skizze und Versuchsablauf}
+\begin{center}
+\includegraphics[scale=0.2]{Daten/aufbau.jpeg}
+\end{center}
+\captionof{figure}[aufbau]{Versuchsaufbau}
+Nach Aufbauen der ersten Schaltung wurde zubeginn des Versuchstages zunächst grob die Resonanzfrequenz bestimmt. \\
+Dazu wird eine Leitungsbrücke angewendet. Die Schaltung ist an ein Oszilloskop angeschlossen. Dierbei wird nun versucht, die Varianz der  Amplitunde des Signal möglichst zu minimieren.\\
+\\
+Sobald ein grober Wert der Resonanzfrequenzes des Schwingkreises bestimmt wurden ist, wird die Leitungsbrücke entfernt.\\
+Nach entfernen der Leitungsbrücke werden jewils 10 Messpunkte oberhalb des groben Ressonanzwertes und jeweils 10 Messpunkte unterhalb des groben Ressonanzwertes bestimmt.\\
+Dabei wird an verschiedenen Frequenzen erneut versucht, durch Regelung eines einstellbaren Widerstands und eines Kondensators, die Amplitude des Signal möglichst minimal zu bekommen. \\
+Es wird ab einer Frequenz von 0,2 KHz gemessen. Die maximale Frequenz liegt bei 8 KHz. Die Messpunkte werden in der Nähe der Resonanzfrequenz näher beieinander gewählt.
+	\pagebreak
+
+
+	
+\input{Kapitel/Formeln.tex}
+
+	\input{Kapitel/Auswertung.tex}
+\chapter{Fehlerbetrachtung}
+	Durch die verschiedenen Werte kann man eine Abweichung von 
+    \begin{align*}
+    	\frac{|f_1 - f_2|}{2} = \Delta f =  \pm 16,75 Hz
+    \end{align*}
+    erwarten. 
+
+    Die in diesem Versuch entstandenen Fehler erklären sich durch:
+    \begin{itemize}
+    \item die Ungenauigkeit der Messgeräte. Die Verwendeten Messgeräte können keine ganz genauen Daten liefern, da sie nicht mit einer absouten Genauigkeit gebaut werden können. Es treten bei allen Messgeräten Fehler auf. Es kann nur versucht werden, diese Fehler sehr klein zu halten.
+    \item die Ungenauigkeit des Ablesens. Auch beim ablesen, ist die Skala nur auf einen gewissen Kommawet ablesbar. Um dort weniger Fehler erhalten zu können, müsste eine genauere Skala verwendet werden.
+    \item das Rauschen. Das auf dem Oszilloskop angezeigte Signal Rauscht zum Teil sehr stark. Dies bringt einen weiteren Faktor, der es nicht ermöglicht einen Wert genau abzulessen.
+    \end{itemize}
+Die  ersten Messwerde wurden widerholt, da die Abweichung zu den anderen  Messwerten größer als erwartet war. Vermutlich kam die starke Abweichung durch fehlende Routine  bei den ersten Messungen. Die weiteren Messungen passten daraufhin schon deutlich besser.
+	\pagebreak
+
+	\chapter{Zusammenfassung}
+    In diesem Versuch wurde zunächst Grob (durch Verwendung einer Leitungsbrücke) die Resonanzfrequenz bestimmt. \\
+    Es wurde die Frequenz von 1,495 kHz ermittelt.\\
+    \\
+    Danach wurde durch viele Messwerte um die Resonanzfrequenz und dabei Ablesen der Kapazität und des verstellbaren Widerstands die Werte bestimmt, mit denen eine genauere Resonanzfrequenz ermittelt werden konnte.\\
+    
+   Hierfür wurde ein Wert von $f=(1463,25 \pm 16,75) Hz$ ermittelt.\\
+   \\
+   Fehlerquellen kommen durch Ableseungenauigkeiten und Ungenauigkeiten der Messgeräte.
+	\pagebreak
+
+	\section{Anhang}
+    
+    \begin{center}
+    		\includegraphics[scale=0.65]{Daten/1.jpg}
+    	\end{center}
+    	\captionof{figure}[Seite 1]{Messprotokoll Seite 1}
+    	\pagebreak
+    	
+        \begin{center}
+    		\includegraphics[scale=0.65]{Daten/2.jpg}
+    	\end{center}
+    	\captionof{figure}[Seite 2]{Messprotokoll Seite 2}
+    	\pagebreak
+	\pagebreak
+
+
+
+
+
+
+
+\end{document}

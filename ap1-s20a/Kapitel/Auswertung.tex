@@ -1,0 +1,58 @@
+\chapter{Auswertung}
+	Die dynamische Viskosität wird nach Formel (3.1) berechnet.
+    \begin{align*}
+    	\eta = K (\rho_k - \rho_{Fl})t 
+    \end{align*}
+    
+    Beispielhaft für die Temperatur $T_1 = 298.25 \si{\kelvin}$:
+    \begin{align*}
+    	\eta = 0.0005445 \si{\pascal\centi\metre^3\per\gram}\cdot (8.141 \si{\gram\per\centi\metre^3} - 0.86 \si{\gram\per\centi\metre^3})\cdot 38.784 \si{\second} = 0.1538 \si{\pascal\second}
+    \end{align*}
+   Tabelle 4.1 enthält alle errechneten Werte. 
+   \begin{center}
+   \begin{tabular}{c|c|c}
+  		Temperatur $T [\si{\kelvin}]$ & Fallzeit $t [\si{\second}]$ & Viskosität $\eta [\si{\pascal\second}]$ \\ \hline \hline
+        298,25 & 38,784	& 0,1538 \\
+		308,25 & 20,994	& 0,0832 \\
+		318,25 & 13,138	& 0,0521 \\
+		328,25 & 7,806	& 0,0310 \\
+		333,25 & 6,336	& 0,0251 \\
+   \end{tabular}
+   \captionof{table}[]{Werte der dynamischen Viskosität}
+   \end{center}
+   
+   Zur Bestimmung der Konstanten des Exponentialgesetzes (3.2) wird $\eta$ semilogarithmisch über $1/T$ aufgetragen. 
+   \begin{center}
+   \begin{gnuplot}[terminal=pdf,terminaloptions={font ",10" linewidth 1},scale=1.2]
+		set xlabel "Temperatur [1/T]"
+		set ylabel "Viskosität [Eta]"
+        set logscale y
+        set yrange [0.02:0.2]
+        set fit errorvariables
+        set key left
+        
+        f(x) = a*exp(b*x)
+        fit f(x) 'data.csv' using (1/$1):($2) via a,b
+        a_err = a_err 
+        b_err = b_err
+        g(x) = (a+0.000000000002)*exp((b+20)*x)
+        h(x) = (a-0.000000000002)*exp((b-20)*x)
+        set label sprintf("c_1 = %.12f", a) at 0.0032,0.06
+		set label sprintf("c_2 = %.12f", b) at 0.0032,0.05
+        set label sprintf("dc_1 = %.12f", a_err) at 0.0032,0.04
+		set label sprintf("dc_2 = %.12f", b_err) at 0.0032,0.03
+        plot 'data.csv' using (1/$1):($2):($3):($4) t "Messwerte" with xyerrorbars,f(x),g(x) t "f_min",h(x) t "f_max"
+\end{gnuplot}
+\captionof{figure}[]{Graphische Darstellung der Arrhenius-Andrade-Beziehung}
+   \end{center}
+ Mithilfe von Gnuplot wurde eine Fitfunktion der Form 
+ \begin{align*}
+ 	f(x) = c_1 \exp(c_2 x^{-1})
+ \end{align*}
+ angefittet.
+ Dabei ergaben sich die Werte von $c_2 = 5249,6449 \si{\kelvin} $ und  $c_1=0.000000003466 Pas$. \\
+ 
+
+
+   
+  

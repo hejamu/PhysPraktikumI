@@ -1,0 +1,89 @@
+\chapter{Auswertung}
+    	\section{Bestimmung der Adiabatenexponenten}
+         Der Adiabatenexponent $\gamma$ wird mit der Formel \eqref{gamma} bestimmt. Dabei wurde das Volumen des Gaseinlassventils bereits in $V_0$ einbezogen. Berechnet für den ersten Wert:
+         
+         \begin{align*}
+         	\gamma_{\text{Luft}} &= \frac{4\pi^2 m V_0f_0^2}{A^2 p_0} \\
+            	&= \frac{4\pi^2 0,0088781 kg \cdot 0,0000911779 m^3 \cdot (13,4 Hz)^2}{(0,000201062 m^2)^2 \cdot 103100 Pa} \\
+                &= 1,38
+         \end{align*}
+        
+        
+       
+         
+         Die Tabellen 5.1, 5.2 und 5.3 enthalten die analog errechneten Werte:
+         \begin{center}
+         
+         \begin{tabular}{c|c}
+$l ~ [\text{m}]$ & $\gamma ~ [1]$    \\ \hline
+0,45 & 1,38 \\
+0,40 & 1,36 \\
+0,35 & 1,44 \\
+0,30 & 1,38 \\
+0,25 & 1,36 \\
+0,20 & 1,34 \\
+0,15 & 1,35 \\
+0,10 & 1,31 
+\end{tabular}
+\captionof{table}[]{Messungen des Adiabatenexponenten mit Luft als Kolbenfüllung.}
+\end{center}
+\begin{minipage}{\textwidth}
+\begin{center}
+         \begin{tabular}{c|c}
+$l ~ [\text{m}]$ & $\gamma ~ [1]$    \\ \hline
+ 0,45	& 1,38 \\
+ 0,40	& 1,34 \\
+ 0,35	& 1,31 \\
+ 0,30	& 1,28 \\
+ 0,25	& 1,30 \\
+ 0,20	& 1,28 \\
+ 0,15	& 1,30 \\ 
+ 0,10	& 1,23
+\end{tabular}
+\captionof{table}[]{Messungen des Adiabatenexponenten mit Kohlenstoffdioxid als Kolbenfüllung.}         
+\end{center}
+\end{minipage}
+\begin{center}
+\ \\         
+\begin{tabular}{c|c}
+$l ~ [\text{m}]$ & $\gamma ~ [1]$    \\ \hline
+0,45   & 1,66 \\
+0,40    & 1,60 \\
+0,35   & 1,65 \\
+0,30    & 1,55 \\
+0,24   & 1,53 \\
+0,19   & 1,41 \\
+0,14   & 2,00 \\
+0,095  & 1,41 
+\end{tabular}
+\captionof{table}[]{Messungen des Adiabatenexponenten mit Argon als Kolbenfüllung.}
+\end{center}
+\ \\
+        \section{Vergleich mit Literaturwerten}
+        	Für den Mittelwert wird jeweils der letzte Messwert ausgelassen, da sich eine Messung ab einer niedrigen Höhe von $l = 10  ~\si{\centi\metre}$ als sehr schwierig erwiesen hat. Das könnte daran liegen, dass die Differenz zwischen $V(l)$, dem Volumen in Abhängigkeit von der Position, und $V_0$, dem Volumen in der Ruhelage, kleiner wird.
+            
+            \begin{align*}
+             \bar \gamma_{\text{Luft}} = \frac{\sum_{i=1}^7 \gamma_{\text{Luft}}^{(i)}}{7} = 1,37 
+            \end{align*}
+            Analog für Kohlenstoffdioxid und Argon
+            \begin{align*}
+             \bar \gamma_{\text{CO2}} &= 1,31 \\
+             \bar \gamma_{\text{Argon}} &= 1,63
+            \end{align*}
+\ \\
+    		Die Literaturwerte für die verwendeten Gase sind in Tabelle 4.4 aufgelistet 
+            \begin{center}
+            	\begin{tabular}{c|c}
+            		Medium & $\gamma ~[1]$ \\ \hline
+                    Luft (N$_2$) & 1,40 \\
+                    CO$_2$ &  1,29\\
+                    Argon & 1,67\\
+            	\end{tabular}
+                \captionof{table}[]{Literaturwerte des Adiabatenexponenten der Gase bei 20 Grad Celsius und Normaldruck \cite{art:test}}
+            \end{center}
+
+            Die Mittelwerte der Messung liegen alle recht nahe an den angegebenen Literaturwerten.
+
+        
+        
+	\pagebreak

@@ -1,0 +1,65 @@
+\documentclass[12pt,a4paper,]{scrreprt}
+\usepackage[ngerman]{babel}
+\usepackage[onehalfspacing]{setspace}
+\usepackage[utf8]{inputenc}
+\usepackage{graphicx}
+\usepackage{array}
+\usepackage{gnuplottex}
+\usepackage{siunitx}
+\let\phi\varphi
+\usepackage{multicol}
+\usepackage{capt-of}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{collcell}
+\usepackage{datatool}
+
+\setkomafont{chapter}{\fontsize{20bp}{22.2bp}\selectfont\bfseries}
+\setkomafont{section}{\fontsize{14bp}{18.8bp}\selectfont\bfseries}
+\setkomafont{subsection}{\fontsize{12bp}{14.4bp}\selectfont\bfseries}
+\renewcommand{\chapterheadstartvskip}{\vspace*{-1\topskip}}
+\renewcommand{\chapterheadendvskip}{\vspace*{0.8\topskip}}
+%---------------------------------------------------------------------------------------------------------------------------------------------------------------
+% Ende der Einstellungen
+%---------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+%---------------------------------------------------------------------------------------------------------------------------------------------------------------
+%Ab hier gibt es Inhalt
+%---------------------------------------------------------------------------------------------------------------------------------------------------------------
+\begin{document}
+
+\title{Elektromagnetische Induktion}
+\author{Henrik Jäger \\ 3114168 \and Lena Majer \\ 3115808}
+\subtitle{E44a \\  Assistent: Domenico Paone}
+\subject{Physikalisches Praktikum I}
+\publishers{Universität Stuttgart}
+%\thanks{Assistent: Sascha Kolatschek}
+
+\maketitle% Titelei
+
+\tableofcontents   %Inhaltsverzeichnis
+\pagebreak
+
+	\input{Kapitel/Einleitung.tex}
+	\input{Kapitel/Messprinzip_mit_Skizze_und_Versuchsablauf.tex}
+	\input{Kapitel/Formeln.tex}
+	\input{Kapitel/Messwerte.tex}
+	\input{Kapitel/Auswertung.tex}
+	\input{Kapitel/Fehlerrechnung.tex}
+	\input{Kapitel/Zusammenfassung.tex}
+	\input{Kapitel/Anhang.tex}
+
+
+	
+
+	
+
+	
+	
+
+
+
+
+
+
+\end{document}
